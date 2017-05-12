@@ -33,7 +33,10 @@ class Server {
         this.app.disable('x-powered-by');
 
         this.app.use('/api', this.api);
-        this.app.use('*', express.static('./public'));
+        this.app.use(express.static('public/'));
+        this.app.get('/', (req, res) => {
+            res.send('public/index.html');
+        });
 
         this.api.use((req, res, next) => {
             res.header('Access-Control-Allow-Origin', '*');

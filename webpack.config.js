@@ -39,7 +39,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/public',
-        filename: './[name].min.js'
+        filename: './static/[name].min.js'
     },
     plugins: plugins
 };
