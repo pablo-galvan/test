@@ -11,16 +11,16 @@ let plugins = [
     new HtmlWebpackPlugin({
         template: './index.html'
     }),
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }
-    })
+    // new webpack.optimize.UglifyJsPlugin({
+    //     compress: {
+    //         warnings: false
+    //     }
+    // })
 ];
 
 module.exports = {
     context: path.join(__dirname, '/client'),
-    devtool: process.env.MODE != 'dev' ? 'cheap-module-source-map' : 'source-map',
+    devtool: 'source',
     entry: './index.js',
     module: {
         rules: [{

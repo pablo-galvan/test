@@ -3,16 +3,13 @@
 import React from 'react';
 import { Route, IndexRoute, browserHistory, Router } from 'react-router';
 
-import App from './containers/App';
+import SearchBar from './containers/SearchBar';
 import Items from './containers/Items';
-
-let Home = () => {
-	<div></div>
-};
+import Home from './containers/Home';
 
 const routes = (
     <Router history={ browserHistory }>
-        <Route path='/' component={ App }>
+        <Route path='/' component={ SearchBar }>
             <IndexRoute component={ Home } />
             
             <Route path='/items' component={ Items } />

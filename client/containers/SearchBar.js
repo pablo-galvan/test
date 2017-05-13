@@ -4,10 +4,10 @@ import React from 'react';
 
 import Search from '../components/Search';
 
-class App extends React.Component {
+class SearchBar extends React.Component {
     render() {
         let { children } = this.props;
-
+console.log(this.props);
         return (
                 <div>
                     <Search />
@@ -18,4 +18,4 @@ class App extends React.Component {
 
 }
 
-export default App;
+export default SearchBar;
