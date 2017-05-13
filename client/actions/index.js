@@ -2,7 +2,7 @@
 
 import request from 'axios';
 
-const HOST = 'http://localhost/';
+const HOST = 'http://localhost:8080/';
 
 export function search(phrase) {
     return (dispatch) => {

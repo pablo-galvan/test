@@ -9,6 +9,8 @@ let helmet = require('helmet');
 let morgan = require('morgan');
 let winston = require('winston');
 
+let Routes = require('./modules/Routes');
+
 class Server {
     constructor() {
         this.app = express();
@@ -23,6 +25,7 @@ class Server {
     start() {
         let steps = [
             this.configure.bind(this),
+            this.routing.bind(this),
             this.init.bind(this)
         ];
 
@@ -54,6 +57,11 @@ class Server {
         this.api.use(helmet());
 
         done(null);
+    }
+
+    routing(done) {
+        new Routes(this.api);
+        return done();
     }
 
     init(done) {
