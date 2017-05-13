@@ -8,6 +8,9 @@ let reducer = (state={ data: [], fetching: false, fetched: false, error: null },
         case 'SEARCH_SUCCESS': {
             return { ...state, items: action.payload };
         }
+        case 'FETCH_ITEM_SUCCESS': {
+        	return { ...state, item: action.payload };
+        }
     }
 
     return state;

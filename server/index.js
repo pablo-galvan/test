@@ -7,6 +7,7 @@ let compression = require('compression');
 let express = require('express');
 let helmet = require('helmet');
 let morgan = require('morgan');
+let path = require('path');
 let winston = require('winston');
 
 let Routes = require('./modules/Routes');
@@ -36,9 +37,9 @@ class Server {
         this.app.disable('x-powered-by');
 
         this.app.use('/api', this.api);
-        this.app.use(express.static('public/'));
-        this.app.get('/', (req, res) => {
-            res.send('public/index.html');
+        this.app.use('/static', express.static('public/static/'));
+        this.app.get('*', (req, res) => {
+            res.sendFile(path.resolve('public/index.html'));
         });
 
         this.api.use((req, res, next) => {

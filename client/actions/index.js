@@ -14,7 +14,7 @@ export function search(phrase) {
         .then((res) => {
             dispatch({
                 type: 'SEARCH_SUCCESS',
-                payload: res.dataç
+                payload: res.data
             });
         })
         .catch((err) => {
@@ -24,4 +24,22 @@ export function search(phrase) {
             });
         });
     };
+}
+
+export function getItem(id) {
+    return (dispatch) => {
+        request.get(`${HOST}api/items/${id}`)
+        .then((res) => {
+            dispatch({
+                type: 'FETCH_ITEM_SUCCESS',
+                payload: res.data
+            });
+        })
+        .catch((err) =>{
+            dispatch({
+                type: 'FETCH_ITEM_REJECTED',
+                payload: err
+            });
+        });
+    }
 }

@@ -11,7 +11,6 @@ class Endpoint {
             baseURL: 'https://api.mercadolibre.com/'
         });
 
-
         this.registerRoutes();
     }
 

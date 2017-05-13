@@ -8,9 +8,12 @@ let webpack = require('webpack');
 
 let plugins = [
     new ExtractTextPlugin('/css/[name].css'),
-    new HtmlWebpackPlugin({
-        template: './index.html'
-    }),
+    new CopyWebpackPlugin([
+        {
+            from: './index.html',
+            to: './index.html'
+        }
+    ])
     // new webpack.optimize.UglifyJsPlugin({
     //     compress: {
     //         warnings: false
@@ -39,7 +42,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/public',
-        filename: './static/[name].min.js'
+        filename: 'static/[name].min.js'
     },
     plugins: plugins
 };

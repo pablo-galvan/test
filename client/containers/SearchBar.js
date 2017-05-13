@@ -7,7 +7,7 @@ import Search from '../components/Search';
 class SearchBar extends React.Component {
     render() {
         let { children } = this.props;
-console.log(this.props);
+
         return (
                 <div>
                     <Search />
