@@ -14,12 +14,14 @@ import Search from '../components/Search';
 class Item extends React.Component {
 	constructor(props) {
 		super(props);
-console.log(this.props);
+
 		this.props.dispatch(getItem(this.props.params.id));
 	}
 	render() {
+console.log(this.props);
 		return <div>
 			<Search {...this.props} />
+			{ typeof this.props.item != 'undefined' ? <img src={ this.props.item.pictures[0]['secure_url'] } alt={ item.title } /> : null }
 			
 		</div>;
 	}
