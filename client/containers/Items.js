@@ -9,7 +9,7 @@ import Listing from '../components/Listing';
 
 @connect(store => {
     return {
-        items: store.reducer.items
+        search: store.reducer.items
     }
 })
 class Items extends React.Component {
@@ -22,7 +22,7 @@ class Items extends React.Component {
     render() {
         return <div>
             <Search {...this.props} />
-            { !!this.props.items ? <Listing items={ this.props.items }/> : null }
+            <Listing items={ !!this.props.search ? this.props.search.items : [] } /> 
         </div>;
     }
 

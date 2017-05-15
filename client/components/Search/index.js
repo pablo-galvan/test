@@ -4,7 +4,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 
-import { search } from '../actions';
+import { search } from '../../actions';
+import './search.scss';
 
 @connect()
 class Search extends React.Component {
@@ -45,10 +46,8 @@ class Search extends React.Component {
                     </a>
                     <form className="nav-search" action="//www.mercadolibre.com.ar/jm/search" method="GET" role="search">
                         <input tabIndex="1" value={ this.state.phrase } type="text" onChange={ this.onChange } className="nav-search-input" name="phrase" placeholder="" autoComplete="off" />
-                        <button className="nav-search-clear-btn" type="button" title="menu.autocomplete.clear"></button>
-                        <button className="nav-search-close-btn" type="button" title="menu.autocomplete.close"></button>
                         <button type="submit" onClick={ this.handlerSubmit } className="nav-search-btn">
-                            <i className="nav-icon-search"><span>Buscar</span></i>
+                            <i className="nav-icon-search"></i>
                         </button>                    
                     </form>
                 </div>
