@@ -10,11 +10,16 @@ header {
     width: 100%;
     z-index: 999;
 
+    .nav-bounds {
+        margin: 0 auto;
+        width: 1100px;
+    }
+
     .nav-logo {
         background-image: url(https://http2.mlstatic.com/ui/navigation/2.0.3/mercadolibre/logo__small.png);
         background-repeat: no-repeat;
+        display: inherit;
         height: 50px;
-        left: 20%;
         overflow: hidden;
         position: absolute;
         text-indent: -999px;
@@ -22,7 +27,7 @@ header {
     }
     .nav-search {
         height: 54px;
-        width: 56%;
+        width: 100%;
         overflow: auto;
         padding: 7px 5px;
         position: relative;
@@ -33,21 +38,21 @@ header {
             border: 1px solid #ccc;
             border-right-width: 0px;
             font-size: 16px;
-            left: 50px;
+            float: left;
+            left: 0;
+            margin: 0 -35px 0 55px;
             padding: 8px 50px 12px 20px;
-            width: 78%;
+            width: 87%;
         }
         .nav-search-btn {
-            border-radius: 0 3px 3px 0;
-            width: 46px;
-            height: 40px;
-            border: 1px solid #ccc;
             background-color: #fff;
-            background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#f1f1f1));
-            background-image: -webkit-linear-gradient(#fff,#f1f1f1);
-            background-image: linear-gradient(#fff,#f1f1f1);
-            top: 7px;
-            position: absolute;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f1f1f1));
+            background-image: -webkit-linear-gradient(#fff, #f1f1f1);
+            background-image: linear-gradient(#fff, #f1f1f1);
+            border: 1px solid #ccc;
+            border-radius: 0 3px 3px 0;
+            height: 40px;
+            width: 46px;
 
             i {
                 font-size: 16px;
