@@ -23,7 +23,7 @@ class Listing extends React.Component {
                                 <img src={ v.picture } alt={ v.title } />
                                 <div>
                                     <h3>${ v.price.amount }</h3>
-                                    { !!v['free_shipping'] ? <span className="ch-ico icon-truck-small"></span> : null }
+                                    { !!v['free_shipping'] ? <span className="icon icon-truck-small"></span> : null }
                                     <h2>{ v.title }</h2>
                                 </div>
                             </Link>

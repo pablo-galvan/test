@@ -22,7 +22,8 @@
 
             div {
                 float: left;
-                margin-left: 10px;
+                margin-left: 20px;
+                margin-top: 15px;
                 text-align: left;
             }
 
@@ -31,13 +32,25 @@
                 width: 150px;
             }
 
+            h3 {
+                float: left;
+            }
+
             h2 {
                 font-size: 1em;
-                margin-top: 20px;
+                margin-top: 25px;
+                float: left;
+                clear: both;
             }
 
             a {
                 color: #333;
+            }
+
+            .icon-truck-small {
+                margin-left: 10px;
+                float: left;
+                margin-top: 5px;
             }
         }
     }
