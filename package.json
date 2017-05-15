@@ -44,6 +44,7 @@
     "webpack": "^2.5.1"
   },
   "scripts": {
+    "start": "echo \"El error de parseQuery es del loader de babel, dicen que se va a actualizar en la proxima version\" && ENV=production webpack -p && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

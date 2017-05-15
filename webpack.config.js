@@ -14,12 +14,15 @@ let plugins = [
             to: './index.html'
         }
     ])
-    // new webpack.optimize.UglifyJsPlugin({
-    //     compress: {
-    //         warnings: false
-    //     }
-    // })
 ];
+
+if (process.ENV == 'production') {
+    plugins.push(new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            warnings: false
+        }
+    }))
+}
 
 module.exports = {
     context: path.join(__dirname, '/client'),
